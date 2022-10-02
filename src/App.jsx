@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
@@ -7,16 +6,32 @@ function App() {
 
   const API = 'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c0001-e000544-r.json'
 
+  // useEffect(() => {
+  //     fetch(API)
+  //       .then(res => res.json())
+  //       .then(data => setCandidatos(data.cand))
+  // }, [])
+
+  const fetchCandidatos = async () => {
+    const result = await fetch(API)
+    const fetchCandidatos = await result.json()
+    setCandidatos(fetchCandidatos.cand)
+  }
+
   useEffect(() => {
-    fetch(API)
-      .then(res => res.json())
-      .then(data => setCandidatos(data.cand))
+    fetchCandidatos()
+    const interval = setInterval(() => {
+      fetchCandidatos()
+    }, 15 * 1000)
+    return () => clearInterval(interval)
   }, [])
 
+  console.log(candidatos)
 
   return (
     <div className="App">
       <h1 className='header'>ELEIÇÕES 2022 <br /><br /> Apuração</h1>
+
       <table>
         <thead>
           <tr>
