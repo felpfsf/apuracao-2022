@@ -16,9 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='header'>
-        <h1>Apuração 2022</h1>
-      </div>
+      <h1 className='header'>ELEIÇÕES 2022 <br /><br /> Apuração</h1>
       <table>
         <thead>
           <tr>

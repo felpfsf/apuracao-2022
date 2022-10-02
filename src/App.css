@@ -13,34 +13,36 @@
 
 .header {
   margin-block: 1rem;
-}
-
-h1 {
-  font-size: 1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  /* font-size: clamp(1.125rem, 0.313rem + 3.6087vw, 3.2rem); */
+  background: rgb(21, 209, 43);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 209, 43, 1) 30%,
+    rgba(236, 221, 8, 1) 75%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
 }
 
 table {
-  border: 1px solid;
-  border-radius: 25px;
+  border-radius: 1em;
   width: 100%;
   border-collapse: collapse;
   text-align: center;
+  overflow: hidden;
 }
 
-thead {
-  border-bottom: 1px solid;
-}
-
-th {
-  padding-block: 0.5rem;
-  padding-inline: 1.125rem;
-}
-
-.tr__candidato {
-  border-bottom: 1px solid;
+th,
+td {
+  color: #222222;
+  padding: 1em;
+  border-bottom: 2px solid #242424;
+  background-color: #ddd;
 }
 
 .tr__candidato td {
   font-size: 14px;
-  padding: 6px;
+  padding: 8px;
 }
