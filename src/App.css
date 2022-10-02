@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  margin-block: 1rem;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+table {
+  border: 1px solid;
+  border-radius: 25px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead {
+  border-bottom: 1px solid;
+}
+
+th {
+  padding-block: 0.5rem;
+  padding-inline: 1.125rem;
+}
+
+.tr__candidato {
+  border-bottom: 1px solid;
+}
+
+.tr__candidato td {
+  font-size: 14px;
+  padding: 6px;
+}
